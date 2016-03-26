@@ -1,0 +1,46 @@
+{
+  "name": "lodash-snippets",
+  "displayName": "Lodash Snippets",
+  "description": "Snippets for popular lodash functions.",
+  "version": "0.1.0",
+  "publisher": "tomphilbin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomphilbin/lodash-snippets.git"
+  },
+  "engines": {
+    "vscode": "^0.10.10"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Javascript",
+    "Typescript",
+    "Lo-Dash",
+    "lodash",
+    "snippets"
+  ],
+  "icon": "./lodash-icon.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./javascript.json"
+      }
+    ]
+  }
+}
