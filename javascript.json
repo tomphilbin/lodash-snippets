@@ -1,8 +1,1760 @@
 {
-  "Create a lodash flow expression": {
-    "prefix": "flow",
-    "body": [
-      "var ${flowName} = _.flow(${first}, ${second});"
-    ]
-  }
+    "Adds two numbers.": {
+        "prefix": "add",
+        "body": [
+            "_.add($1)"
+        ]
+    },
+    "The opposite of `_.before`; this method creates a function that invokes\n`func` once it's called `n` or more times.": {
+        "prefix": "aftr",
+        "body": [
+            "_.after($1)"
+        ]
+    },
+    "Creates a function that accepts up to `n` arguments, ignoring any\nadditional arguments.": {
+        "prefix": "ary",
+        "body": [
+            "_.ary($1)"
+        ]
+    },
+    "Assigns own enumerable properties of source objects to the destination\nobject. Source objects are applied from left to right. Subsequent sources\noverwrite property assignments of previous sources.\n\n**Note:** This method mutates `object` and is loosely based on\n[`Object.assign`](https://mdn.io/Object/assign).": {
+        "prefix": "assgn",
+        "body": [
+            "_.assign($1)"
+        ]
+    },
+    "This method is like `_.assign` except that it iterates over own and\ninherited source properties.\n\n**Note:** This method mutates `object`.": {
+        "prefix": "extnd",
+        "body": [
+            "_.extend($1)"
+        ]
+    },
+    "This method is like `_.assignIn` except that it accepts `customizer` which\nis invoked to produce the assigned values. If `customizer` returns `undefined`\nassignment is handled by the method instead. The `customizer` is invoked\nwith five arguments: (objValue, srcValue, key, object, source).\n\n**Note:** This method mutates `object`.": {
+        "prefix": "extndwth",
+        "body": [
+            "_.extendWith($1)"
+        ]
+    },
+    "This method is like `_.assign` except that it accepts `customizer` which\nis invoked to produce the assigned values. If `customizer` returns `undefined`\nassignment is handled by the method instead. The `customizer` is invoked\nwith five arguments: (objValue, srcValue, key, object, source).\n\n**Note:** This method mutates `object`.": {
+        "prefix": "assgnwth",
+        "body": [
+            "_.assignWith($1)"
+        ]
+    },
+    "Creates an array of values corresponding to `paths` of `object`.": {
+        "prefix": "at",
+        "body": [
+            "_.at($1)"
+        ]
+    },
+    "Attempts to invoke `func`, returning either the result or the caught error\nobject. Any additional arguments are provided to `func` when it's invoked.": {
+        "prefix": "attmpt",
+        "body": [
+            "_.attempt($1)"
+        ]
+    },
+    "Creates a function that invokes `func`, with the `this` binding and arguments\nof the created function, while it's called less than `n` times. Subsequent\ncalls to the created function return the result of the last `func` invocation.": {
+        "prefix": "bfr",
+        "body": [
+            "_.before($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with the `this` binding of `thisArg`\nand prepends any additional `_.bind` arguments to those provided to the\nbound function.\n\nThe `_.bind.placeholder` value, which defaults to `_` in monolithic builds,\nmay be used as a placeholder for partially applied arguments.\n\n**Note:** Unlike native `Function#bind` this method doesn't set the \"length\"\nproperty of bound functions.": {
+        "prefix": "bnd",
+        "body": [
+            "_.bind($1)"
+        ]
+    },
+    "Binds methods of an object to the object itself, overwriting the existing\nmethod.\n\n**Note:** This method doesn't set the \"length\" property of bound functions.": {
+        "prefix": "bndll",
+        "body": [
+            "_.bindAll($1)"
+        ]
+    },
+    "Creates a function that invokes the method at `object[key]` and prepends\nany additional `_.bindKey` arguments to those provided to the bound function.\n\nThis method differs from `_.bind` by allowing bound functions to reference\nmethods that may be redefined or don't yet exist.\nSee [Peter Michaux's article](http://peter.michaux.ca/articles/lazy-function-definition-pattern)\nfor more details.\n\nThe `_.bindKey.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for partially applied arguments.": {
+        "prefix": "bndky",
+        "body": [
+            "_.bindKey($1)"
+        ]
+    },
+    "Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).": {
+        "prefix": "cmlcs",
+        "body": [
+            "_.camelCase($1)"
+        ]
+    },
+    "Converts the first character of `string` to upper case and the remaining\nto lower case.": {
+        "prefix": "cptlz",
+        "body": [
+            "_.capitalize($1)"
+        ]
+    },
+    "Casts `value` as an array if it's not one.": {
+        "prefix": "cstrry",
+        "body": [
+            "_.castArray($1)"
+        ]
+    },
+    "Computes `number` rounded up to `precision`.": {
+        "prefix": "cl",
+        "body": [
+            "_.ceil($1)"
+        ]
+    },
+    "Creates a `lodash` object that wraps `value` with explicit method chaining enabled.\nThe result of such method chaining must be unwrapped with `_#value`.": {
+        "prefix": "chn",
+        "body": [
+            "_.chain($1)"
+        ]
+    },
+    "Creates an array of elements split into groups the length of `size`.\nIf `array` can't be split evenly, the final chunk will be the remaining\nelements.": {
+        "prefix": "chnk",
+        "body": [
+            "_.chunk($1)"
+        ]
+    },
+    "Clamps `number` within the inclusive `lower` and `upper` bounds.": {
+        "prefix": "clmp",
+        "body": [
+            "_.clamp($1)"
+        ]
+    },
+    "Creates a shallow clone of `value`.\n\n**Note:** This method is loosely based on the\n[structured clone algorithm](https://mdn.io/Structured_clone_algorithm)\nand supports cloning arrays, array buffers, booleans, date objects, maps,\nnumbers, `Object` objects, regexes, sets, strings, symbols, and typed\narrays. The own enumerable properties of `arguments` objects are cloned\nas plain objects. An empty object is returned for uncloneable values such\nas error objects, functions, DOM nodes, and WeakMaps.": {
+        "prefix": "cln",
+        "body": [
+            "_.clone($1)"
+        ]
+    },
+    "This method is like `_.clone` except that it recursively clones `value`.": {
+        "prefix": "clndp",
+        "body": [
+            "_.cloneDeep($1)"
+        ]
+    },
+    "This method is like `_.cloneWith` except that it recursively clones `value`.": {
+        "prefix": "clndpwth",
+        "body": [
+            "_.cloneDeepWith($1)"
+        ]
+    },
+    "This method is like `_.clone` except that it accepts `customizer` which\nis invoked to produce the cloned value. If `customizer` returns `undefined`\ncloning is handled by the method instead. The `customizer` is invoked with\nup to four arguments; (value [, index|key, object, stack]).": {
+        "prefix": "clnwth",
+        "body": [
+            "_.cloneWith($1)"
+        ]
+    },
+    "Executes the chained sequence and returns the wrapped result.": {
+        "prefix": "cmmt",
+        "body": [
+            "_.commit($1)"
+        ]
+    },
+    "Creates an array with all falsey values removed. The values `false`, `null`,\n`0`, `\"\"`, `undefined`, and `NaN` are falsey.": {
+        "prefix": "cmpct",
+        "body": [
+            "_.compact($1)"
+        ]
+    },
+    "Creates a new array concatenating `array` with any additional arrays\nand/or values.": {
+        "prefix": "cnct",
+        "body": [
+            "_.concat($1)"
+        ]
+    },
+    "Creates a function that iterates over `pairs` invoking the corresponding\nfunction of the first predicate to return truthy. The predicate-function\npairs are invoked with the `this` binding and arguments of the created\nfunction.": {
+        "prefix": "cnd",
+        "body": [
+            "_.cond($1)"
+        ]
+    },
+    "Creates a function that invokes the predicate properties of `source` with\nthe corresponding property values of a given object, returning `true` if\nall predicates return truthy, else `false`.": {
+        "prefix": "cnfrms",
+        "body": [
+            "_.conforms($1)"
+        ]
+    },
+    "Creates a function that returns `value`.": {
+        "prefix": "cnstnt",
+        "body": [
+            "_.constant($1)"
+        ]
+    },
+    "Flattens `array` a single level deep.": {
+        "prefix": "flttn",
+        "body": [
+            "_.flatten($1)"
+        ]
+    },
+    "Recursively flattens `array`.": {
+        "prefix": "flttndp",
+        "body": [
+            "_.flattenDeep($1)"
+        ]
+    },
+    "Gets the first element of `array`.": {
+        "prefix": "frst",
+        "body": [
+            "_.first($1)"
+        ]
+    },
+    "Gets the index at which the first occurrence of `value` is found in `array`\nusing [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons. If `fromIndex` is negative, it's used as the offset\nfrom the end of `array`.": {
+        "prefix": "indxf",
+        "body": [
+            "_.indexOf($1)"
+        ]
+    },
+    "Gets the last element of `array`.": {
+        "prefix": "lst",
+        "body": [
+            "_.last($1)"
+        ]
+    },
+    "Creates a slice of `array` from `start` up to, but not including, `end`.\n\n**Note:** This method is used instead of [`Array#slice`](https://mdn.io/Array/slice)\nto ensure dense arrays are returned.": {
+        "prefix": "slc",
+        "body": [
+            "_.slice($1)"
+        ]
+    },
+    "This method invokes `interceptor` and returns `value`. The interceptor\nis invoked with one argument; (value). The purpose of this method is to\n\"tap into\" a method chain in order to modify intermediate results.": {
+        "prefix": "tp",
+        "body": [
+            "_.tap($1)"
+        ]
+    },
+    "This method is like `_.tap` except that it returns the result of `interceptor`.\nThe purpose of this method is to \"pass thru\" values replacing intermediate\nresults in a method chain.": {
+        "prefix": "thr",
+        "body": [
+            "_.thru($1)"
+        ]
+    },
+    "Enables explicit method chaining on the wrapper object.": {
+        "prefix": "chn",
+        "body": [
+            "_.chain($1)"
+        ]
+    },
+    "Executes the chained sequence to extract the unwrapped value.": {
+        "prefix": "vl",
+        "body": [
+            "_.value($1)"
+        ]
+    },
+    "Checks if `predicate` returns truthy for **all** elements of `collection`.\nIteration is stopped once `predicate` returns falsey. The predicate is\ninvoked with three arguments: (value, index|key, collection).": {
+        "prefix": "evry",
+        "body": [
+            "_.every($1)"
+        ]
+    },
+    "Iterates over elements of `collection`, returning an array of all elements\n`predicate` returns truthy for. The predicate is invoked with three arguments:\n(value, index|key, collection).": {
+        "prefix": "fltr",
+        "body": [
+            "_.filter($1)"
+        ]
+    },
+    "Iterates over elements of `collection`, returning the first element\n`predicate` returns truthy for. The predicate is invoked with three arguments:\n(value, index|key, collection).": {
+        "prefix": "fnd",
+        "body": [
+            "_.find($1)"
+        ]
+    },
+    "Iterates over elements of `collection` invoking `iteratee` for each element.\nThe iteratee is invoked with three arguments: (value, index|key, collection).\nIteratee functions may exit iteration early by explicitly returning `false`.\n\n**Note:** As with other \"Collections\" methods, objects with a \"length\" property\nare iterated like arrays. To avoid this behavior use `_.forIn` or `_.forOwn`\nfor object iteration.": {
+        "prefix": "ech",
+        "body": [
+            "_.each($1)"
+        ]
+    },
+    "Creates an array of values by running each element in `collection` through\n`iteratee`. The iteratee is invoked with three arguments:\n(value, index|key, collection).\n\nMany lodash methods are guarded to work as iteratees for methods like\n`_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.\n\nThe guarded methods are:\n`ary`, `curry`, `curryRight`, `drop`, `dropRight`, `every`, `fill`,\n`invert`, `parseInt`, `random`, `range`, `rangeRight`, `slice`, `some`,\n`sortBy`, `take`, `takeRight`, `template`, `trim`, `trimEnd`, `trimStart`,\nand `words`": {
+        "prefix": "mp",
+        "body": [
+            "_.map($1)"
+        ]
+    },
+    "Reduces `collection` to a value which is the accumulated result of running\neach element in `collection` through `iteratee`, where each successive\ninvocation is supplied the return value of the previous. If `accumulator`\nis not given the first element of `collection` is used as the initial\nvalue. The iteratee is invoked with four arguments:\n(accumulator, value, index|key, collection).\n\nMany lodash methods are guarded to work as iteratees for methods like\n`_.reduce`, `_.reduceRight`, and `_.transform`.\n\nThe guarded methods are:\n`assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,\nand `sortBy`": {
+        "prefix": "rdc",
+        "body": [
+            "_.reduce($1)"
+        ]
+    },
+    "Gets the size of `collection` by returning its length for array-like\nvalues or the number of own enumerable properties for objects.": {
+        "prefix": "sz",
+        "body": [
+            "_.size($1)"
+        ]
+    },
+    "Checks if `predicate` returns truthy for **any** element of `collection`.\nIteration is stopped once `predicate` returns truthy. The predicate is\ninvoked with three arguments: (value, index|key, collection).": {
+        "prefix": "sm",
+        "body": [
+            "_.some($1)"
+        ]
+    },
+    "Creates an array of elements, sorted in ascending order by the results of\nrunning each element in a collection through each iteratee. This method\nperforms a stable sort, that is, it preserves the original sort order of\nequal elements. The iteratees are invoked with one argument: (value).": {
+        "prefix": "srtby",
+        "body": [
+            "_.sortBy($1)"
+        ]
+    },
+    "Defers invoking the `func` until the current call stack has cleared. Any\nadditional arguments are provided to `func` when it's invoked.": {
+        "prefix": "dfr",
+        "body": [
+            "_.defer($1)"
+        ]
+    },
+    "Invokes `func` after `wait` milliseconds. Any additional arguments are\nprovided to `func` when it's invoked.": {
+        "prefix": "dly",
+        "body": [
+            "_.delay($1)"
+        ]
+    },
+    "Creates a function that negates the result of the predicate `func`. The\n`func` predicate is invoked with the `this` binding and arguments of the\ncreated function.": {
+        "prefix": "ngt",
+        "body": [
+            "_.negate($1)"
+        ]
+    },
+    "Creates a function that is restricted to invoking `func` once. Repeat calls\nto the function return the value of the first invocation. The `func` is\ninvoked with the `this` binding and arguments of the created function.": {
+        "prefix": "onc",
+        "body": [
+            "_.once($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with the `this` binding of the\ncreated function and arguments from `start` and beyond provided as an array.\n\n**Note:** This method is based on the [rest parameter](https://mdn.io/rest_parameters).": {
+        "prefix": "rst",
+        "body": [
+            "_.rest($1)"
+        ]
+    },
+    "Performs a [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\ncomparison between two values to determine if they are equivalent.": {
+        "prefix": "eq",
+        "body": [
+            "_.eq($1)"
+        ]
+    },
+    "Checks if `value` is greater than `other`.": {
+        "prefix": "gt",
+        "body": [
+            "_.gt($1)"
+        ]
+    },
+    "Checks if `value` is likely an `arguments` object.": {
+        "prefix": "isrgmnts",
+        "body": [
+            "_.isArguments($1)"
+        ]
+    },
+    "Checks if `value` is classified as an `Array` object.": {
+        "prefix": "isrry",
+        "body": [
+            "_.isArray($1)"
+        ]
+    },
+    "Checks if `value` is array-like. A value is considered array-like if it's\nnot a function and has a `value.length` that's an integer greater than or\nequal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.": {
+        "prefix": "isrrylk",
+        "body": [
+            "_.isArrayLike($1)"
+        ]
+    },
+    "This method is like `_.isArrayLike` except that it also checks if `value`\nis an object.": {
+        "prefix": "isrrylkbjct",
+        "body": [
+            "_.isArrayLikeObject($1)"
+        ]
+    },
+    "Checks if `value` is classified as a boolean primitive or object.": {
+        "prefix": "isbln",
+        "body": [
+            "_.isBoolean($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `Date` object.": {
+        "prefix": "isdt",
+        "body": [
+            "_.isDate($1)"
+        ]
+    },
+    "Checks if `value` is an empty collection or object. A value is considered\nempty if it's an `arguments` object, array, string, or jQuery-like collection\nwith a length of `0` or has no own enumerable properties.": {
+        "prefix": "ismpty",
+        "body": [
+            "_.isEmpty($1)"
+        ]
+    },
+    "Performs a deep comparison between two values to determine if they are\nequivalent.\n\n**Note:** This method supports comparing arrays, array buffers, booleans,\ndate objects, error objects, maps, numbers, `Object` objects, regexes,\nsets, strings, symbols, and typed arrays. `Object` objects are compared\nby their own, not inherited, enumerable properties. Functions and DOM\nnodes are **not** supported.": {
+        "prefix": "isql",
+        "body": [
+            "_.isEqual($1)"
+        ]
+    },
+    "Checks if `value` is a finite primitive number.\n\n**Note:** This method is based on [`Number.isFinite`](https://mdn.io/Number/isFinite).": {
+        "prefix": "isfnt",
+        "body": [
+            "_.isFinite($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `Function` object.": {
+        "prefix": "isfnctn",
+        "body": [
+            "_.isFunction($1)"
+        ]
+    },
+    "Checks if `value` is a valid array-like length.\n\n**Note:** This function is loosely based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).": {
+        "prefix": "islngth",
+        "body": [
+            "_.isLength($1)"
+        ]
+    },
+    "Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.\n(e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)": {
+        "prefix": "isbjct",
+        "body": [
+            "_.isObject($1)"
+        ]
+    },
+    "Checks if `value` is object-like. A value is object-like if it's not `null`\nand has a `typeof` result of \"object\".": {
+        "prefix": "isbjctlk",
+        "body": [
+            "_.isObjectLike($1)"
+        ]
+    },
+    "Checks if `value` is `NaN`.\n\n**Note:** This method is not the same as [`isNaN`](https://es5.github.io/#x15.1.2.4)\nwhich returns `true` for `undefined` and other non-numeric values.": {
+        "prefix": "isnn",
+        "body": [
+            "_.isNaN($1)"
+        ]
+    },
+    "Checks if `value` is `null`.": {
+        "prefix": "isnll",
+        "body": [
+            "_.isNull($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `Number` primitive or object.\n\n**Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are classified\nas numbers, use the `_.isFinite` method.": {
+        "prefix": "isnmbr",
+        "body": [
+            "_.isNumber($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `RegExp` object.": {
+        "prefix": "isrgxp",
+        "body": [
+            "_.isRegExp($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `String` primitive or object.": {
+        "prefix": "isstrng",
+        "body": [
+            "_.isString($1)"
+        ]
+    },
+    "Checks if `value` is `undefined`.": {
+        "prefix": "isndfnd",
+        "body": [
+            "_.isUndefined($1)"
+        ]
+    },
+    "Checks if `value` is less than `other`.": {
+        "prefix": "lt",
+        "body": [
+            "_.lt($1)"
+        ]
+    },
+    "Converts `value` to an array.": {
+        "prefix": "trry",
+        "body": [
+            "_.toArray($1)"
+        ]
+    },
+    "Converts `value` to an integer.\n\n**Note:** This function is loosely based on [`ToInteger`](http://www.ecma-international.org/ecma-262/6.0/#sec-tointeger).": {
+        "prefix": "tntgr",
+        "body": [
+            "_.toInteger($1)"
+        ]
+    },
+    "Converts `value` to a number.": {
+        "prefix": "tnmbr",
+        "body": [
+            "_.toNumber($1)"
+        ]
+    },
+    "Converts `value` to a string if it's not one. An empty string is returned\nfor `null` and `undefined` values. The sign of `-0` is preserved.": {
+        "prefix": "tstrng",
+        "body": [
+            "_.toString($1)"
+        ]
+    },
+    "Creates an object that inherits from the `prototype` object. If a `properties`\nobject is given its own enumerable properties are assigned to the created object.": {
+        "prefix": "crt",
+        "body": [
+            "_.create($1)"
+        ]
+    },
+    "Assigns own and inherited enumerable properties of source objects to the\ndestination object for all destination properties that resolve to `undefined`.\nSource objects are applied from left to right. Once a property is set,\nadditional values of the same property are ignored.\n\n**Note:** This method mutates `object`.": {
+        "prefix": "dflts",
+        "body": [
+            "_.defaults($1)"
+        ]
+    },
+    "Checks if `path` is a direct property of `object`.": {
+        "prefix": "hs",
+        "body": [
+            "_.has($1)"
+        ]
+    },
+    "Creates an array of the own enumerable property names of `object`.\n\n**Note:** Non-object values are coerced to objects. See the\n[ES spec](http://ecma-international.org/ecma-262/6.0/#sec-object.keys)\nfor more details.": {
+        "prefix": "kys",
+        "body": [
+            "_.keys($1)"
+        ]
+    },
+    "Creates an array of the own and inherited enumerable property names of `object`.\n\n**Note:** Non-object values are coerced to objects.": {
+        "prefix": "kysn",
+        "body": [
+            "_.keysIn($1)"
+        ]
+    },
+    "Creates an object composed of the picked `object` properties.": {
+        "prefix": "pck",
+        "body": [
+            "_.pick($1)"
+        ]
+    },
+    "This method is like `_.get` except that if the resolved value is a function\nit's invoked with the `this` binding of its parent object and its result\nis returned.": {
+        "prefix": "rslt",
+        "body": [
+            "_.result($1)"
+        ]
+    },
+    "Creates an array of the own enumerable property values of `object`.\n\n**Note:** Non-object values are coerced to objects.": {
+        "prefix": "vls",
+        "body": [
+            "_.values($1)"
+        ]
+    },
+    "Converts the characters \"&\", \"<\", \">\", '\"', \"'\", and \"\\`\" in `string` to\ntheir corresponding HTML entities.\n\n**Note:** No other characters are escaped. To escape additional\ncharacters use a third-party library like [_he_](https://mths.be/he).\n\nThough the \">\" character is escaped for symmetry, characters like\n\">\" and \"/\" don't need escaping in HTML and have no special meaning\nunless they're part of a tag or unquoted attribute value.\nSee [Mathias Bynens's article](https://mathiasbynens.be/notes/ambiguous-ampersands)\n(under \"semi-related fun fact\") for more details.\n\nBackticks are escaped because in IE < 9, they can break out of\nattribute values or HTML comments. See [#59](https://html5sec.org/#59),\n[#102](https://html5sec.org/#102), [#108](https://html5sec.org/#108), and\n[#133](https://html5sec.org/#133) of the [HTML5 Security Cheatsheet](https://html5sec.org/)\nfor more details.\n\nWhen working with HTML you should always [quote attribute values](http://wonko.com/post/html-escaping)\nto reduce XSS vectors.": {
+        "prefix": "escp",
+        "body": [
+            "_.escape($1)"
+        ]
+    },
+    "This method returns the first argument given to it.": {
+        "prefix": "idntty",
+        "body": [
+            "_.identity($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with the arguments of the created\nfunction. If `func` is a property name the created callback returns the\nproperty value for a given element. If `func` is an object the created\ncallback returns `true` for elements that contain the equivalent object\nproperties, otherwise it returns `false`.": {
+        "prefix": "itrt",
+        "body": [
+            "_.iteratee($1)"
+        ]
+    },
+    "Creates a function that performs a partial deep comparison between a given\nobject and `source`, returning `true` if the given object has equivalent\nproperty values, else `false`. The created function is equivalent to\n`_.isMatch` with a `source` partially applied.\n\n**Note:** This method supports comparing the same values as `_.isEqual`.": {
+        "prefix": "mtchs",
+        "body": [
+            "_.matches($1)"
+        ]
+    },
+    "Adds all own enumerable function properties of a source object to the\ndestination object. If `object` is a function then methods are added to\nits prototype as well.\n\n**Note:** Use `_.runInContext` to create a pristine `lodash` function to\navoid conflicts caused by modifying the original.": {
+        "prefix": "mxn",
+        "body": [
+            "_.mixin($1)"
+        ]
+    },
+    "Reverts the `_` variable to its previous value and returns a reference to\nthe `lodash` function.": {
+        "prefix": "ncnflct",
+        "body": [
+            "_.noConflict($1)"
+        ]
+    },
+    "A no-operation function that returns `undefined` regardless of the\narguments it receives.": {
+        "prefix": "np",
+        "body": [
+            "_.noop($1)"
+        ]
+    },
+    "Generates a unique ID. If `prefix` is given the ID is appended to it.": {
+        "prefix": "unqd",
+        "body": [
+            "_.uniqueId($1)"
+        ]
+    },
+    "Computes the maximum value of `array`. If `array` is empty or falsey\n`undefined` is returned.": {
+        "prefix": "mx",
+        "body": [
+            "_.max($1)"
+        ]
+    },
+    "Computes the minimum value of `array`. If `array` is empty or falsey\n`undefined` is returned.": {
+        "prefix": "mn",
+        "body": [
+            "_.min($1)"
+        ]
+    },
+    "Creates an object composed of keys generated from the results of running\neach element of `collection` through `iteratee`. The corresponding value\nof each key is the number of times the key was returned by `iteratee`.\nThe iteratee is invoked with one argument: (value).": {
+        "prefix": "cntby",
+        "body": [
+            "_.countBy($1)"
+        ]
+    },
+    "Creates a function that accepts arguments of `func` and either invokes\n`func` returning its result, if at least `arity` number of arguments have\nbeen provided, or returns a function that accepts the remaining `func`\narguments, and so on. The arity of `func` may be specified if `func.length`\nis not sufficient.\n\nThe `_.curry.placeholder` value, which defaults to `_` in monolithic builds,\nmay be used as a placeholder for provided arguments.\n\n**Note:** This method doesn't set the \"length\" property of curried functions.": {
+        "prefix": "crry",
+        "body": [
+            "_.curry($1)"
+        ]
+    },
+    "This method is like `_.curry` except that arguments are applied to `func`\nin the manner of `_.partialRight` instead of `_.partial`.\n\nThe `_.curryRight.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for provided arguments.\n\n**Note:** This method doesn't set the \"length\" property of curried functions.": {
+        "prefix": "crryrght",
+        "body": [
+            "_.curryRight($1)"
+        ]
+    },
+    "Creates a debounced function that delays invoking `func` until after `wait`\nmilliseconds have elapsed since the last time the debounced function was\ninvoked. The debounced function comes with a `cancel` method to cancel\ndelayed `func` invocations and a `flush` method to immediately invoke them.\nProvide an options object to indicate whether `func` should be invoked on\nthe leading and/or trailing edge of the `wait` timeout. The `func` is invoked\nwith the last arguments provided to the debounced function. Subsequent calls\nto the debounced function return the result of the last `func` invocation.\n\n**Note:** If `leading` and `trailing` options are `true`, `func` is invoked\non the trailing edge of the timeout only if the debounced function is\ninvoked more than once during the `wait` timeout.\n\nSee [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)\nfor details over the differences between `_.debounce` and `_.throttle`.": {
+        "prefix": "dbnc",
+        "body": [
+            "_.debounce($1)"
+        ]
+    },
+    "Deburrs `string` by converting [latin-1 supplementary letters](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table)\nto basic latin letters and removing [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).": {
+        "prefix": "dbrr",
+        "body": [
+            "_.deburr($1)"
+        ]
+    },
+    "This method is like `_.defaults` except that it recursively assigns\ndefault properties.\n\n**Note:** This method mutates `object`.": {
+        "prefix": "dfltsdp",
+        "body": [
+            "_.defaultsDeep($1)"
+        ]
+    },
+    "Creates an array of unique `array` values not included in the other\ngiven arrays using [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons. The order of result values is determined by the\norder they occur in the first array.": {
+        "prefix": "dffrnc",
+        "body": [
+            "_.difference($1)"
+        ]
+    },
+    "This method is like `_.difference` except that it accepts `iteratee` which\nis invoked for each element of `array` and `values` to generate the criterion\nby which they're compared. Result values are chosen from the first array.\nThe iteratee is invoked with one argument: (value).": {
+        "prefix": "dffrncby",
+        "body": [
+            "_.differenceBy($1)"
+        ]
+    },
+    "This method is like `_.difference` except that it accepts `comparator`\nwhich is invoked to compare elements of `array` to `values`. Result values\nare chosen from the first array. The comparator is invoked with two arguments:\n(arrVal, othVal).": {
+        "prefix": "dffrncwth",
+        "body": [
+            "_.differenceWith($1)"
+        ]
+    },
+    "Creates a slice of `array` with `n` elements dropped from the beginning.": {
+        "prefix": "drp",
+        "body": [
+            "_.drop($1)"
+        ]
+    },
+    "Creates a slice of `array` with `n` elements dropped from the end.": {
+        "prefix": "drprght",
+        "body": [
+            "_.dropRight($1)"
+        ]
+    },
+    "Creates a slice of `array` excluding elements dropped from the end.\nElements are dropped until `predicate` returns falsey. The predicate is\ninvoked with three arguments: (value, index, array).": {
+        "prefix": "drprghtwhl",
+        "body": [
+            "_.dropRightWhile($1)"
+        ]
+    },
+    "Creates a slice of `array` excluding elements dropped from the beginning.\nElements are dropped until `predicate` returns falsey. The predicate is\ninvoked with three arguments: (value, index, array).": {
+        "prefix": "drpwhl",
+        "body": [
+            "_.dropWhile($1)"
+        ]
+    },
+    "Checks if `string` ends with the given target string.": {
+        "prefix": "endswth",
+        "body": [
+            "_.endsWith($1)"
+        ]
+    },
+    "Escapes the `RegExp` special characters \"^\", \"$\", \"\\\", \".\", \"*\", \"+\",\n\"?\", \"(\", \")\", \"[\", \"]\", \"{\", \"}\", and \"|\" in `string`.": {
+        "prefix": "escprgxp",
+        "body": [
+            "_.escapeRegExp($1)"
+        ]
+    },
+    "Fills elements of `array` with `value` from `start` up to, but not\nincluding, `end`.\n\n**Note:** This method mutates `array`.": {
+        "prefix": "fll",
+        "body": [
+            "_.fill($1)"
+        ]
+    },
+    "This method is like `_.find` except that it returns the index of the first\nelement `predicate` returns truthy for instead of the element itself.": {
+        "prefix": "fndndx",
+        "body": [
+            "_.findIndex($1)"
+        ]
+    },
+    "This method is like `_.find` except that it returns the key of the first\nelement `predicate` returns truthy for instead of the element itself.": {
+        "prefix": "fndky",
+        "body": [
+            "_.findKey($1)"
+        ]
+    },
+    "This method is like `_.find` except that it iterates over elements of\n`collection` from right to left.": {
+        "prefix": "fndlst",
+        "body": [
+            "_.findLast($1)"
+        ]
+    },
+    "This method is like `_.findIndex` except that it iterates over elements\nof `collection` from right to left.": {
+        "prefix": "fndlstndx",
+        "body": [
+            "_.findLastIndex($1)"
+        ]
+    },
+    "This method is like `_.findKey` except that it iterates over elements of\na collection in the opposite order.": {
+        "prefix": "fndlstky",
+        "body": [
+            "_.findLastKey($1)"
+        ]
+    },
+    "Creates an array of flattened values by running each element in `collection`\nthrough `iteratee` and concating its result to the other mapped values.\nThe iteratee is invoked with three arguments: (value, index|key, collection).": {
+        "prefix": "fltmp",
+        "body": [
+            "_.flatMap($1)"
+        ]
+    },
+    "Recursively flatten `array` up to `depth` times.": {
+        "prefix": "flttndpth",
+        "body": [
+            "_.flattenDepth($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with arguments reversed.": {
+        "prefix": "flp",
+        "body": [
+            "_.flip($1)"
+        ]
+    },
+    "Computes `number` rounded down to `precision`.": {
+        "prefix": "flr",
+        "body": [
+            "_.floor($1)"
+        ]
+    },
+    "Creates a function that returns the result of invoking the given functions\nwith the `this` binding of the created function, where each successive\ninvocation is supplied the return value of the previous.": {
+        "prefix": "flw",
+        "body": [
+            "_.flow($1)"
+        ]
+    },
+    "This method is like `_.flow` except that it creates a function that\ninvokes the given functions from right to left.": {
+        "prefix": "flwrght",
+        "body": [
+            "_.flowRight($1)"
+        ]
+    },
+    "This method is like `_.forEach` except that it iterates over elements of\n`collection` from right to left.": {
+        "prefix": "echrght",
+        "body": [
+            "_.eachRight($1)"
+        ]
+    },
+    "Iterates over own and inherited enumerable properties of an object invoking\n`iteratee` for each property. The iteratee is invoked with three arguments:\n(value, key, object). Iteratee functions may exit iteration early by explicitly\nreturning `false`.": {
+        "prefix": "frn",
+        "body": [
+            "_.forIn($1)"
+        ]
+    },
+    "This method is like `_.forIn` except that it iterates over properties of\n`object` in the opposite order.": {
+        "prefix": "frnrght",
+        "body": [
+            "_.forInRight($1)"
+        ]
+    },
+    "Iterates over own enumerable properties of an object invoking `iteratee`\nfor each property. The iteratee is invoked with three arguments:\n(value, key, object). Iteratee functions may exit iteration early by\nexplicitly returning `false`.": {
+        "prefix": "frwn",
+        "body": [
+            "_.forOwn($1)"
+        ]
+    },
+    "This method is like `_.forOwn` except that it iterates over properties of\n`object` in the opposite order.": {
+        "prefix": "frwnrght",
+        "body": [
+            "_.forOwnRight($1)"
+        ]
+    },
+    "The inverse of `_.toPairs`; this method returns an object composed\nfrom key-value `pairs`.": {
+        "prefix": "frmprs",
+        "body": [
+            "_.fromPairs($1)"
+        ]
+    },
+    "Creates an array of function property names from own enumerable properties\nof `object`.": {
+        "prefix": "fnctns",
+        "body": [
+            "_.functions($1)"
+        ]
+    },
+    "Creates an array of function property names from own and inherited\nenumerable properties of `object`.": {
+        "prefix": "fnctnsn",
+        "body": [
+            "_.functionsIn($1)"
+        ]
+    },
+    "Gets the value at `path` of `object`. If the resolved value is\n`undefined` the `defaultValue` is used in its place.": {
+        "prefix": "gt",
+        "body": [
+            "_.get($1)"
+        ]
+    },
+    "Creates an object composed of keys generated from the results of running\neach element of `collection` through `iteratee`. The corresponding value\nof each key is an array of elements responsible for generating the key.\nThe iteratee is invoked with one argument: (value).": {
+        "prefix": "grpby",
+        "body": [
+            "_.groupBy($1)"
+        ]
+    },
+    "Checks if `value` is greater than or equal to `other`.": {
+        "prefix": "gt",
+        "body": [
+            "_.gte($1)"
+        ]
+    },
+    "Checks if `path` is a direct or inherited property of `object`.": {
+        "prefix": "hsn",
+        "body": [
+            "_.hasIn($1)"
+        ]
+    },
+    "Checks if `n` is between `start` and up to but not including, `end`. If\n`end` is not specified it's set to `start` with `start` then set to `0`.\nIf `start` is greater than `end` the params are swapped to support\nnegative ranges.": {
+        "prefix": "inrng",
+        "body": [
+            "_.inRange($1)"
+        ]
+    },
+    "Checks if `value` is in `collection`. If `collection` is a string it's checked\nfor a substring of `value`, otherwise [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nis used for equality comparisons. If `fromIndex` is negative, it's used as\nthe offset from the end of `collection`.": {
+        "prefix": "inclds",
+        "body": [
+            "_.includes($1)"
+        ]
+    },
+    "Gets all but the last element of `array`.": {
+        "prefix": "intl",
+        "body": [
+            "_.initial($1)"
+        ]
+    },
+    "Creates an array of unique values that are included in all given arrays\nusing [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons. The order of result values is determined by the\norder they occur in the first array.": {
+        "prefix": "intrsctn",
+        "body": [
+            "_.intersection($1)"
+        ]
+    },
+    "This method is like `_.intersection` except that it accepts `iteratee`\nwhich is invoked for each element of each `arrays` to generate the criterion\nby which they're compared. Result values are chosen from the first array.\nThe iteratee is invoked with one argument: (value).": {
+        "prefix": "intrsctnby",
+        "body": [
+            "_.intersectionBy($1)"
+        ]
+    },
+    "This method is like `_.intersection` except that it accepts `comparator`\nwhich is invoked to compare elements of `arrays`. Result values are chosen\nfrom the first array. The comparator is invoked with two arguments:\n(arrVal, othVal).": {
+        "prefix": "intrsctnwth",
+        "body": [
+            "_.intersectionWith($1)"
+        ]
+    },
+    "Creates an object composed of the inverted keys and values of `object`.\nIf `object` contains duplicate values, subsequent values overwrite property\nassignments of previous values.": {
+        "prefix": "invrt",
+        "body": [
+            "_.invert($1)"
+        ]
+    },
+    "This method is like `_.invert` except that the inverted object is generated\nfrom the results of running each element of `object` through `iteratee`.\nThe corresponding inverted value of each inverted key is an array of keys\nresponsible for generating the inverted value. The iteratee is invoked\nwith one argument: (value).": {
+        "prefix": "invrtby",
+        "body": [
+            "_.invertBy($1)"
+        ]
+    },
+    "Invokes the method at `path` of `object`.": {
+        "prefix": "invk",
+        "body": [
+            "_.invoke($1)"
+        ]
+    },
+    "Invokes the method at `path` of each element in `collection`, returning\nan array of the results of each invoked method. Any additional arguments\nare provided to each invoked method. If `methodName` is a function it's\ninvoked for, and `this` bound to, each element in `collection`.": {
+        "prefix": "invkmp",
+        "body": [
+            "_.invokeMap($1)"
+        ]
+    },
+    "Checks if `value` is classified as an `ArrayBuffer` object.": {
+        "prefix": "isrrybffr",
+        "body": [
+            "_.isArrayBuffer($1)"
+        ]
+    },
+    "Checks if `value` is a buffer.": {
+        "prefix": "isbffr",
+        "body": [
+            "_.isBuffer($1)"
+        ]
+    },
+    "Checks if `value` is likely a DOM element.": {
+        "prefix": "islmnt",
+        "body": [
+            "_.isElement($1)"
+        ]
+    },
+    "This method is like `_.isEqual` except that it accepts `customizer` which\nis invoked to compare values. If `customizer` returns `undefined` comparisons\nare handled by the method instead. The `customizer` is invoked with up to\nsix arguments: (objValue, othValue [, index|key, object, other, stack]).": {
+        "prefix": "isqlwth",
+        "body": [
+            "_.isEqualWith($1)"
+        ]
+    },
+    "Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,\n`SyntaxError`, `TypeError`, or `URIError` object.": {
+        "prefix": "isrrr",
+        "body": [
+            "_.isError($1)"
+        ]
+    },
+    "Checks if `value` is an integer.\n\n**Note:** This method is based on [`Number.isInteger`](https://mdn.io/Number/isInteger).": {
+        "prefix": "isntgr",
+        "body": [
+            "_.isInteger($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `Map` object.": {
+        "prefix": "ismp",
+        "body": [
+            "_.isMap($1)"
+        ]
+    },
+    "Performs a partial deep comparison between `object` and `source` to\ndetermine if `object` contains equivalent property values. This method is\nequivalent to a `_.matches` function when `source` is partially applied.\n\n**Note:** This method supports comparing the same values as `_.isEqual`.": {
+        "prefix": "ismtch",
+        "body": [
+            "_.isMatch($1)"
+        ]
+    },
+    "This method is like `_.isMatch` except that it accepts `customizer` which\nis invoked to compare values. If `customizer` returns `undefined` comparisons\nare handled by the method instead. The `customizer` is invoked with five\narguments: (objValue, srcValue, index|key, object, source).": {
+        "prefix": "ismtchwth",
+        "body": [
+            "_.isMatchWith($1)"
+        ]
+    },
+    "Checks if `value` is a native function.": {
+        "prefix": "isntv",
+        "body": [
+            "_.isNative($1)"
+        ]
+    },
+    "Checks if `value` is `null` or `undefined`.": {
+        "prefix": "isnl",
+        "body": [
+            "_.isNil($1)"
+        ]
+    },
+    "Checks if `value` is a plain object, that is, an object created by the\n`Object` constructor or one with a `[[Prototype]]` of `null`.": {
+        "prefix": "isplnbjct",
+        "body": [
+            "_.isPlainObject($1)"
+        ]
+    },
+    "Checks if `value` is a safe integer. An integer is safe if it's an IEEE-754\ndouble precision number which isn't the result of a rounded unsafe integer.\n\n**Note:** This method is based on [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).": {
+        "prefix": "issfntgr",
+        "body": [
+            "_.isSafeInteger($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `Set` object.": {
+        "prefix": "isst",
+        "body": [
+            "_.isSet($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `Symbol` primitive or object.": {
+        "prefix": "issymbl",
+        "body": [
+            "_.isSymbol($1)"
+        ]
+    },
+    "Checks if `value` is classified as a typed array.": {
+        "prefix": "istypdrry",
+        "body": [
+            "_.isTypedArray($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `WeakMap` object.": {
+        "prefix": "iswkmp",
+        "body": [
+            "_.isWeakMap($1)"
+        ]
+    },
+    "Checks if `value` is classified as a `WeakSet` object.": {
+        "prefix": "iswkst",
+        "body": [
+            "_.isWeakSet($1)"
+        ]
+    },
+    "Converts all elements in `array` into a string separated by `separator`.": {
+        "prefix": "jn",
+        "body": [
+            "_.join($1)"
+        ]
+    },
+    "Converts `string` to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).": {
+        "prefix": "kbbcs",
+        "body": [
+            "_.kebabCase($1)"
+        ]
+    },
+    "Creates an object composed of keys generated from the results of running\neach element of `collection` through `iteratee`. The corresponding value\nof each key is the last element responsible for generating the key. The\niteratee is invoked with one argument: (value).": {
+        "prefix": "kyby",
+        "body": [
+            "_.keyBy($1)"
+        ]
+    },
+    "This method is like `_.indexOf` except that it iterates over elements of\n`array` from right to left.": {
+        "prefix": "lstndxf",
+        "body": [
+            "_.lastIndexOf($1)"
+        ]
+    },
+    "Create a new pristine `lodash` function using the `context` object.": {
+        "prefix": "rnncntxt",
+        "body": [
+            "_.runInContext($1)"
+        ]
+    },
+    "Removes all given values from `array` using\n[`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons.\n\n**Note:** Unlike `_.without`, this method mutates `array`. Use `_.remove`\nto remove elements from an array by predicate.": {
+        "prefix": "pll",
+        "body": [
+            "_.pull($1)"
+        ]
+    },
+    "This method is like `_.pull` except that it accepts an array of values to remove.\n\n**Note:** Unlike `_.difference`, this method mutates `array`.": {
+        "prefix": "pllll",
+        "body": [
+            "_.pullAll($1)"
+        ]
+    },
+    "This method is like `_.pullAll` except that it accepts `iteratee` which is\ninvoked for each element of `array` and `values` to generate the criterion\nby which they're compared. The iteratee is invoked with one argument: (value).\n\n**Note:** Unlike `_.differenceBy`, this method mutates `array`.": {
+        "prefix": "pllllby",
+        "body": [
+            "_.pullAllBy($1)"
+        ]
+    },
+    "This method is like `_.pullAll` except that it accepts `comparator` which\nis invoked to compare elements of `array` to `values`. The comparator is\ninvoked with two arguments: (arrVal, othVal).\n\n**Note:** Unlike `_.differenceWith`, this method mutates `array`.": {
+        "prefix": "pllllwth",
+        "body": [
+            "_.pullAllWith($1)"
+        ]
+    },
+    "Removes elements from `array` corresponding to `indexes` and returns an\narray of removed elements.\n\n**Note:** Unlike `_.at`, this method mutates `array`.": {
+        "prefix": "pllt",
+        "body": [
+            "_.pullAt($1)"
+        ]
+    },
+    "Removes all elements from `array` that `predicate` returns truthy for\nand returns an array of the removed elements. The predicate is invoked\nwith three arguments: (value, index, array).\n\n**Note:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`\nto pull elements from an array by value.": {
+        "prefix": "rmv",
+        "body": [
+            "_.remove($1)"
+        ]
+    },
+    "Reverses `array` so that the first element becomes the last, the second\nelement becomes the second to last, and so on.\n\n**Note:** This method mutates `array` and is based on\n[`Array#reverse`](https://mdn.io/Array/reverse).": {
+        "prefix": "rvrs",
+        "body": [
+            "_.reverse($1)"
+        ]
+    },
+    "Uses a binary search to determine the lowest index at which `value` should\nbe inserted into `array` in order to maintain its sort order.": {
+        "prefix": "srtdndx",
+        "body": [
+            "_.sortedIndex($1)"
+        ]
+    },
+    "This method is like `_.sortedIndex` except that it accepts `iteratee`\nwhich is invoked for `value` and each element of `array` to compute their\nsort ranking. The iteratee is invoked with one argument: (value).": {
+        "prefix": "srtdndxby",
+        "body": [
+            "_.sortedIndexBy($1)"
+        ]
+    },
+    "This method is like `_.indexOf` except that it performs a binary\nsearch on a sorted `array`.": {
+        "prefix": "srtdndxf",
+        "body": [
+            "_.sortedIndexOf($1)"
+        ]
+    },
+    "This method is like `_.sortedIndex` except that it returns the highest\nindex at which `value` should be inserted into `array` in order to\nmaintain its sort order.": {
+        "prefix": "srtdlstndx",
+        "body": [
+            "_.sortedLastIndex($1)"
+        ]
+    },
+    "This method is like `_.sortedLastIndex` except that it accepts `iteratee`\nwhich is invoked for `value` and each element of `array` to compute their\nsort ranking. The iteratee is invoked with one argument: (value).": {
+        "prefix": "srtdlstndxby",
+        "body": [
+            "_.sortedLastIndexBy($1)"
+        ]
+    },
+    "This method is like `_.lastIndexOf` except that it performs a binary\nsearch on a sorted `array`.": {
+        "prefix": "srtdlstndxf",
+        "body": [
+            "_.sortedLastIndexOf($1)"
+        ]
+    },
+    "This method is like `_.uniq` except that it's designed and optimized\nfor sorted arrays.": {
+        "prefix": "srtdnq",
+        "body": [
+            "_.sortedUniq($1)"
+        ]
+    },
+    "This method is like `_.uniqBy` except that it's designed and optimized\nfor sorted arrays.": {
+        "prefix": "srtdnqby",
+        "body": [
+            "_.sortedUniqBy($1)"
+        ]
+    },
+    "Gets all but the first element of `array`.": {
+        "prefix": "tl",
+        "body": [
+            "_.tail($1)"
+        ]
+    },
+    "Creates a slice of `array` with `n` elements taken from the beginning.": {
+        "prefix": "tk",
+        "body": [
+            "_.take($1)"
+        ]
+    },
+    "Creates a slice of `array` with `n` elements taken from the end.": {
+        "prefix": "tkrght",
+        "body": [
+            "_.takeRight($1)"
+        ]
+    },
+    "Creates a slice of `array` with elements taken from the end. Elements are\ntaken until `predicate` returns falsey. The predicate is invoked with three\narguments: (value, index, array).": {
+        "prefix": "tkrghtwhl",
+        "body": [
+            "_.takeRightWhile($1)"
+        ]
+    },
+    "Creates a slice of `array` with elements taken from the beginning. Elements\nare taken until `predicate` returns falsey. The predicate is invoked with\nthree arguments: (value, index, array).": {
+        "prefix": "tkwhl",
+        "body": [
+            "_.takeWhile($1)"
+        ]
+    },
+    "Creates an array of unique values, in order, from all given arrays using\n[`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons.": {
+        "prefix": "unn",
+        "body": [
+            "_.union($1)"
+        ]
+    },
+    "This method is like `_.union` except that it accepts `iteratee` which is\ninvoked for each element of each `arrays` to generate the criterion by which\nuniqueness is computed. The iteratee is invoked with one argument: (value).": {
+        "prefix": "unnby",
+        "body": [
+            "_.unionBy($1)"
+        ]
+    },
+    "This method is like `_.union` except that it accepts `comparator` which\nis invoked to compare elements of `arrays`. The comparator is invoked\nwith two arguments: (arrVal, othVal).": {
+        "prefix": "unnwth",
+        "body": [
+            "_.unionWith($1)"
+        ]
+    },
+    "Creates a duplicate-free version of an array, using\n[`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons, in which only the first occurrence of each element\nis kept.": {
+        "prefix": "unq",
+        "body": [
+            "_.uniq($1)"
+        ]
+    },
+    "This method is like `_.uniq` except that it accepts `iteratee` which is\ninvoked for each element in `array` to generate the criterion by which\nuniqueness is computed. The iteratee is invoked with one argument: (value).": {
+        "prefix": "unqby",
+        "body": [
+            "_.uniqBy($1)"
+        ]
+    },
+    "This method is like `_.uniq` except that it accepts `comparator` which\nis invoked to compare elements of `array`. The comparator is invoked with\ntwo arguments: (arrVal, othVal).": {
+        "prefix": "unqwth",
+        "body": [
+            "_.uniqWith($1)"
+        ]
+    },
+    "This method is like `_.zip` except that it accepts an array of grouped\nelements and creates an array regrouping the elements to their pre-zip\nconfiguration.": {
+        "prefix": "unzp",
+        "body": [
+            "_.unzip($1)"
+        ]
+    },
+    "This method is like `_.unzip` except that it accepts `iteratee` to specify\nhow regrouped values should be combined. The iteratee is invoked with the\nelements of each group: (...group).": {
+        "prefix": "unzpwth",
+        "body": [
+            "_.unzipWith($1)"
+        ]
+    },
+    "Creates an array excluding all given values using\n[`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)\nfor equality comparisons.": {
+        "prefix": "wtht",
+        "body": [
+            "_.without($1)"
+        ]
+    },
+    "Creates an array of unique values that is the [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference)\nof the given arrays. The order of result values is determined by the order\nthey occur in the arrays.": {
+        "prefix": "xr",
+        "body": [
+            "_.xor($1)"
+        ]
+    },
+    "This method is like `_.xor` except that it accepts `iteratee` which is\ninvoked for each element of each `arrays` to generate the criterion by which\nby which they're compared. The iteratee is invoked with one argument: (value).": {
+        "prefix": "xrby",
+        "body": [
+            "_.xorBy($1)"
+        ]
+    },
+    "This method is like `_.xor` except that it accepts `comparator` which is\ninvoked to compare elements of `arrays`. The comparator is invoked with\ntwo arguments: (arrVal, othVal).": {
+        "prefix": "xrwth",
+        "body": [
+            "_.xorWith($1)"
+        ]
+    },
+    "Creates an array of grouped elements, the first of which contains the first\nelements of the given arrays, the second of which contains the second elements\nof the given arrays, and so on.": {
+        "prefix": "zp",
+        "body": [
+            "_.zip($1)"
+        ]
+    },
+    "This method is like `_.fromPairs` except that it accepts two arrays,\none of property names and one of corresponding values.": {
+        "prefix": "zpbjct",
+        "body": [
+            "_.zipObject($1)"
+        ]
+    },
+    "This method is like `_.zipObject` except that it supports property paths.": {
+        "prefix": "zpbjctdp",
+        "body": [
+            "_.zipObjectDeep($1)"
+        ]
+    },
+    "This method is like `_.zip` except that it accepts `iteratee` to specify\nhow grouped values should be combined. The iteratee is invoked with the\nelements of each group: (...group).": {
+        "prefix": "zpwth",
+        "body": [
+            "_.zipWith($1)"
+        ]
+    },
+    "This method is the wrapper version of `_.at`.": {
+        "prefix": "at",
+        "body": [
+            "_.at($1)"
+        ]
+    },
+    "This method is the wrapper version of `_.flatMap`.": {
+        "prefix": "fltmp",
+        "body": [
+            "_.flatMap($1)"
+        ]
+    },
+    "Gets the next value on a wrapped object following the\n[iterator protocol](https://mdn.io/iteration_protocols#iterator).": {
+        "prefix": "nxt",
+        "body": [
+            "_.next($1)"
+        ]
+    },
+    "Creates a clone of the chained sequence planting `value` as the wrapped value.": {
+        "prefix": "plnt",
+        "body": [
+            "_.plant($1)"
+        ]
+    },
+    "This method is the wrapper version of `_.reverse`.\n\n**Note:** This method mutates the wrapped array.": {
+        "prefix": "rvrs",
+        "body": [
+            "_.reverse($1)"
+        ]
+    },
+    "This method is like `_.sortBy` except that it allows specifying the sort\norders of the iteratees to sort by. If `orders` is unspecified, all values\nare sorted in ascending order. Otherwise, specify an order of \"desc\" for\ndescending or \"asc\" for ascending sort order of corresponding values.": {
+        "prefix": "ordrby",
+        "body": [
+            "_.orderBy($1)"
+        ]
+    },
+    "Creates an array of elements split into two groups, the first of which\ncontains elements `predicate` returns truthy for, the second of which\ncontains elements `predicate` returns falsey for. The predicate is\ninvoked with one argument: (value).": {
+        "prefix": "prttn",
+        "body": [
+            "_.partition($1)"
+        ]
+    },
+    "This method is like `_.reduce` except that it iterates over elements of\n`collection` from right to left.": {
+        "prefix": "rdcrght",
+        "body": [
+            "_.reduceRight($1)"
+        ]
+    },
+    "The opposite of `_.filter`; this method returns the elements of `collection`\nthat `predicate` does **not** return truthy for.": {
+        "prefix": "rjct",
+        "body": [
+            "_.reject($1)"
+        ]
+    },
+    "Gets a random element from `collection`.": {
+        "prefix": "smpl",
+        "body": [
+            "_.sample($1)"
+        ]
+    },
+    "Gets `n` random elements at unique keys from `collection` up to the\nsize of `collection`.": {
+        "prefix": "smplsz",
+        "body": [
+            "_.sampleSize($1)"
+        ]
+    },
+    "Creates an array of shuffled values, using a version of the\n[Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle).": {
+        "prefix": "shffl",
+        "body": [
+            "_.shuffle($1)"
+        ]
+    },
+    "Gets the timestamp of the number of milliseconds that have elapsed since\nthe Unix epoch (1 January 1970 00:00:00 UTC).": {
+        "prefix": "nw",
+        "body": [
+            "_.now($1)"
+        ]
+    },
+    "Creates a function that memoizes the result of `func`. If `resolver` is\nprovided it determines the cache key for storing the result based on the\narguments provided to the memoized function. By default, the first argument\nprovided to the memoized function is used as the map cache key. The `func`\nis invoked with the `this` binding of the memoized function.\n\n**Note:** The cache is exposed as the `cache` property on the memoized\nfunction. Its creation may be customized by replacing the `_.memoize.Cache`\nconstructor with one whose instances implement the [`Map`](http://ecma-international.org/ecma-262/6.0/#sec-properties-of-the-map-prototype-object)\nmethod interface of `delete`, `get`, `has`, and `set`.": {
+        "prefix": "mmz",
+        "body": [
+            "_.memoize($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with arguments transformed by\ncorresponding `transforms`.": {
+        "prefix": "ovrrgs",
+        "body": [
+            "_.overArgs($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with `partial` arguments prepended\nto those provided to the new function. This method is like `_.bind` except\nit does **not** alter the `this` binding.\n\nThe `_.partial.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for partially applied arguments.\n\n**Note:** This method doesn't set the \"length\" property of partially\napplied functions.": {
+        "prefix": "prtl",
+        "body": [
+            "_.partial($1)"
+        ]
+    },
+    "This method is like `_.partial` except that partially applied arguments\nare appended to those provided to the new function.\n\nThe `_.partialRight.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for partially applied arguments.\n\n**Note:** This method doesn't set the \"length\" property of partially\napplied functions.": {
+        "prefix": "prtlrght",
+        "body": [
+            "_.partialRight($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with arguments arranged according\nto the specified indexes where the argument value at the first index is\nprovided as the first argument, the argument value at the second index is\nprovided as the second argument, and so on.": {
+        "prefix": "rrg",
+        "body": [
+            "_.rearg($1)"
+        ]
+    },
+    "Creates a function that invokes `func` with the `this` binding of the created\nfunction and an array of arguments much like [`Function#apply`](https://es5.github.io/#x15.3.4.3).\n\n**Note:** This method is based on the [spread operator](https://mdn.io/spread_operator).": {
+        "prefix": "sprd",
+        "body": [
+            "_.spread($1)"
+        ]
+    },
+    "Creates a throttled function that only invokes `func` at most once per\nevery `wait` milliseconds. The throttled function comes with a `cancel`\nmethod to cancel delayed `func` invocations and a `flush` method to\nimmediately invoke them. Provide an options object to indicate whether\n`func` should be invoked on the leading and/or trailing edge of the `wait`\ntimeout. The `func` is invoked with the last arguments provided to the\nthrottled function. Subsequent calls to the throttled function return the\nresult of the last `func` invocation.\n\n**Note:** If `leading` and `trailing` options are `true`, `func` is invoked\non the trailing edge of the timeout only if the throttled function is\ninvoked more than once during the `wait` timeout.\n\nSee [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)\nfor details over the differences between `_.throttle` and `_.debounce`.": {
+        "prefix": "thrttl",
+        "body": [
+            "_.throttle($1)"
+        ]
+    },
+    "Creates a function that accepts up to one argument, ignoring any\nadditional arguments.": {
+        "prefix": "unry",
+        "body": [
+            "_.unary($1)"
+        ]
+    },
+    "Creates a function that provides `value` to the wrapper function as its\nfirst argument. Any additional arguments provided to the function are\nappended to those provided to the wrapper function. The wrapper is invoked\nwith the `this` binding of the created function.": {
+        "prefix": "wrp",
+        "body": [
+            "_.wrap($1)"
+        ]
+    },
+    "Checks if `value` is less than or equal to `other`.": {
+        "prefix": "lt",
+        "body": [
+            "_.lte($1)"
+        ]
+    },
+    "Converts `value` to an integer suitable for use as the length of an\narray-like object.\n\n**Note:** This method is based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).": {
+        "prefix": "tlngth",
+        "body": [
+            "_.toLength($1)"
+        ]
+    },
+    "Converts `value` to a plain object flattening inherited enumerable\nproperties of `value` to own properties of the plain object.": {
+        "prefix": "tplnbjct",
+        "body": [
+            "_.toPlainObject($1)"
+        ]
+    },
+    "Converts `value` to a safe integer. A safe integer can be compared and\nrepresented correctly.": {
+        "prefix": "tsfntgr",
+        "body": [
+            "_.toSafeInteger($1)"
+        ]
+    },
+    "The opposite of `_.mapValues`; this method creates an object with the\nsame values as `object` and keys generated by running each own enumerable\nproperty of `object` through `iteratee`. The iteratee is invoked with\nthree arguments: (value, key, object).": {
+        "prefix": "mpkys",
+        "body": [
+            "_.mapKeys($1)"
+        ]
+    },
+    "Creates an object with the same keys as `object` and values generated by\nrunning each own enumerable property of `object` through `iteratee`. The\niteratee is invoked with three arguments: (value, key, object).": {
+        "prefix": "mpvls",
+        "body": [
+            "_.mapValues($1)"
+        ]
+    },
+    "This method is like `_.assign` except that it recursively merges own and\ninherited enumerable properties of source objects into the destination\nobject. Source properties that resolve to `undefined` are skipped if a\ndestination value exists. Array and plain object properties are merged\nrecursively.Other objects and value types are overridden by assignment.\nSource objects are applied from left to right. Subsequent sources\noverwrite property assignments of previous sources.\n\n**Note:** This method mutates `object`.": {
+        "prefix": "mrg",
+        "body": [
+            "_.merge($1)"
+        ]
+    },
+    "This method is like `_.merge` except that it accepts `customizer` which\nis invoked to produce the merged values of the destination and source\nproperties. If `customizer` returns `undefined` merging is handled by the\nmethod instead. The `customizer` is invoked with seven arguments:\n(objValue, srcValue, key, object, source, stack).\n\n**Note:** This method mutates `object`.": {
+        "prefix": "mrgwth",
+        "body": [
+            "_.mergeWith($1)"
+        ]
+    },
+    "The opposite of `_.pick`; this method creates an object composed of the\nown and inherited enumerable properties of `object` that are not omitted.": {
+        "prefix": "omt",
+        "body": [
+            "_.omit($1)"
+        ]
+    },
+    "The opposite of `_.pickBy`; this method creates an object composed of\nthe own and inherited enumerable properties of `object` that `predicate`\ndoesn't return truthy for. The predicate is invoked with two arguments:\n(value, key).": {
+        "prefix": "omtby",
+        "body": [
+            "_.omitBy($1)"
+        ]
+    },
+    "Creates an object composed of the `object` properties `predicate` returns\ntruthy for. The predicate is invoked with two arguments: (value, key).": {
+        "prefix": "pckby",
+        "body": [
+            "_.pickBy($1)"
+        ]
+    },
+    "Sets the value at `path` of `object`. If a portion of `path` doesn't exist\nit's created. Arrays are created for missing index properties while objects\nare created for all other missing properties. Use `_.setWith` to customize\n`path` creation.\n\n**Note:** This method mutates `object`.": {
+        "prefix": "st",
+        "body": [
+            "_.set($1)"
+        ]
+    },
+    "This method is like `_.set` except that it accepts `customizer` which is\ninvoked to produce the objects of `path`.  If `customizer` returns `undefined`\npath creation is handled by the method instead. The `customizer` is invoked\nwith three arguments: (nsValue, key, nsObject).\n\n**Note:** This method mutates `object`.": {
+        "prefix": "stwth",
+        "body": [
+            "_.setWith($1)"
+        ]
+    },
+    "Creates an array of own enumerable key-value pairs for `object` which\ncan be consumed by `_.fromPairs`.": {
+        "prefix": "tprs",
+        "body": [
+            "_.toPairs($1)"
+        ]
+    },
+    "Creates an array of own and inherited enumerable key-value pairs for\n`object` which can be consumed by `_.fromPairs`.": {
+        "prefix": "tprsn",
+        "body": [
+            "_.toPairsIn($1)"
+        ]
+    },
+    "An alternative to `_.reduce`; this method transforms `object` to a new\n`accumulator` object which is the result of running each of its own enumerable\nproperties through `iteratee`, with each invocation potentially mutating\nthe `accumulator` object. The iteratee is invoked with four arguments:\n(accumulator, value, key, object). Iteratee functions may exit iteration\nearly by explicitly returning `false`.": {
+        "prefix": "trnsfrm",
+        "body": [
+            "_.transform($1)"
+        ]
+    },
+    "Removes the property at `path` of `object`.\n\n**Note:** This method mutates `object`.": {
+        "prefix": "unst",
+        "body": [
+            "_.unset($1)"
+        ]
+    },
+    "This method is like `_.set` except that accepts `updater` to produce the\nvalue to set. Use `_.updateWith` to customize `path` creation. The `updater`\nis invoked with one argument: (value).\n\n**Note:** This method mutates `object`.": {
+        "prefix": "updt",
+        "body": [
+            "_.update($1)"
+        ]
+    },
+    "This method is like `_.update` except that it accepts `customizer` which is\ninvoked to produce the objects of `path`.  If `customizer` returns `undefined`\npath creation is handled by the method instead. The `customizer` is invoked\nwith three arguments: (nsValue, key, nsObject).\n\n**Note:** This method mutates `object`.": {
+        "prefix": "updtwth",
+        "body": [
+            "_.updateWith($1)"
+        ]
+    },
+    "Creates an array of the own and inherited enumerable property values of `object`.\n\n**Note:** Non-object values are coerced to objects.": {
+        "prefix": "vlsn",
+        "body": [
+            "_.valuesIn($1)"
+        ]
+    },
+    "Produces a random number between the inclusive `lower` and `upper` bounds.\nIf only one argument is provided a number between `0` and the given number\nis returned. If `floating` is `true`, or either `lower` or `upper` are floats,\na floating-point number is returned instead of an integer.\n\n**Note:** JavaScript follows the IEEE-754 standard for resolving\nfloating-point values which can produce unexpected results.": {
+        "prefix": "rndm",
+        "body": [
+            "_.random($1)"
+        ]
+    },
+    "Converts `string`, as space separated words, to lower case.": {
+        "prefix": "lwrcs",
+        "body": [
+            "_.lowerCase($1)"
+        ]
+    },
+    "Converts the first character of `string` to lower case.": {
+        "prefix": "lwrfrst",
+        "body": [
+            "_.lowerFirst($1)"
+        ]
+    },
+    "Converts the first character of `string` to upper case.": {
+        "prefix": "upprfrst",
+        "body": [
+            "_.upperFirst($1)"
+        ]
+    },
+    "Pads `string` on the left and right sides if it's shorter than `length`.\nPadding characters are truncated if they can't be evenly divided by `length`.": {
+        "prefix": "pd",
+        "body": [
+            "_.pad($1)"
+        ]
+    },
+    "Pads `string` on the right side if it's shorter than `length`. Padding\ncharacters are truncated if they exceed `length`.": {
+        "prefix": "pdnd",
+        "body": [
+            "_.padEnd($1)"
+        ]
+    },
+    "Pads `string` on the left side if it's shorter than `length`. Padding\ncharacters are truncated if they exceed `length`.": {
+        "prefix": "pdstrt",
+        "body": [
+            "_.padStart($1)"
+        ]
+    },
+    "Converts `string` to an integer of the specified radix. If `radix` is\n`undefined` or `0`, a `radix` of `10` is used unless `value` is a hexadecimal,\nin which case a `radix` of `16` is used.\n\n**Note:** This method aligns with the [ES5 implementation](https://es5.github.io/#x15.1.2.2)\nof `parseInt`.": {
+        "prefix": "prsnt",
+        "body": [
+            "_.parseInt($1)"
+        ]
+    },
+    "Repeats the given string `n` times.": {
+        "prefix": "rpt",
+        "body": [
+            "_.repeat($1)"
+        ]
+    },
+    "Replaces matches for `pattern` in `string` with `replacement`.\n\n**Note:** This method is based on [`String#replace`](https://mdn.io/String/replace).": {
+        "prefix": "rplc",
+        "body": [
+            "_.replace($1)"
+        ]
+    },
+    "Converts `string` to [snake case](https://en.wikipedia.org/wiki/Snake_case).": {
+        "prefix": "snkcs",
+        "body": [
+            "_.snakeCase($1)"
+        ]
+    },
+    "Splits `string` by `separator`.\n\n**Note:** This method is based on [`String#split`](https://mdn.io/String/split).": {
+        "prefix": "splt",
+        "body": [
+            "_.split($1)"
+        ]
+    },
+    "Converts `string` to [start case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).": {
+        "prefix": "strtcs",
+        "body": [
+            "_.startCase($1)"
+        ]
+    },
+    "Checks if `string` starts with the given target string.": {
+        "prefix": "strtswth",
+        "body": [
+            "_.startsWith($1)"
+        ]
+    },
+    "Creates a compiled template function that can interpolate data properties\nin \"interpolate\" delimiters, HTML-escape interpolated data properties in\n\"escape\" delimiters, and execute JavaScript in \"evaluate\" delimiters. Data\nproperties may be accessed as free variables in the template. If a setting\nobject is given it takes precedence over `_.templateSettings` values.\n\n**Note:** In the development build `_.template` utilizes\n[sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)\nfor easier debugging.\n\nFor more information on precompiling templates see\n[lodash's custom builds documentation](https://lodash.com/custom-builds).\n\nFor more information on Chrome extension sandboxes see\n[Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).": {
+        "prefix": "tmplt",
+        "body": [
+            "_.template($1)"
+        ]
+    },
+    "Converts `string`, as a whole, to lower case just like\n[String#toLowerCase](https://mdn.io/toLowerCase).": {
+        "prefix": "tlwr",
+        "body": [
+            "_.toLower($1)"
+        ]
+    },
+    "Converts `string`, as a whole, to upper case just like\n[String#toUpperCase](https://mdn.io/toUpperCase).": {
+        "prefix": "tppr",
+        "body": [
+            "_.toUpper($1)"
+        ]
+    },
+    "Removes leading and trailing whitespace or specified characters from `string`.": {
+        "prefix": "trm",
+        "body": [
+            "_.trim($1)"
+        ]
+    },
+    "Removes trailing whitespace or specified characters from `string`.": {
+        "prefix": "trmnd",
+        "body": [
+            "_.trimEnd($1)"
+        ]
+    },
+    "Removes leading whitespace or specified characters from `string`.": {
+        "prefix": "trmstrt",
+        "body": [
+            "_.trimStart($1)"
+        ]
+    },
+    "Truncates `string` if it's longer than the given maximum string length.\nThe last characters of the truncated string are replaced with the omission\nstring which defaults to \"...\".": {
+        "prefix": "trnct",
+        "body": [
+            "_.truncate($1)"
+        ]
+    },
+    "The inverse of `_.escape`; this method converts the HTML entities\n`&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#39;`, and `&#96;` in `string` to their\ncorresponding characters.\n\n**Note:** No other HTML entities are unescaped. To unescape additional HTML\nentities use a third-party library like [_he_](https://mths.be/he).": {
+        "prefix": "unscp",
+        "body": [
+            "_.unescape($1)"
+        ]
+    },
+    "Converts `string`, as space separated words, to upper case.": {
+        "prefix": "upprcs",
+        "body": [
+            "_.upperCase($1)"
+        ]
+    },
+    "Splits `string` into an array of its words.": {
+        "prefix": "wrds",
+        "body": [
+            "_.words($1)"
+        ]
+    },
+    "Creates a function that performs a partial deep comparison between the\nvalue at `path` of a given object to `srcValue`, returning `true` if the\nobject value is equivalent, else `false`.\n\n**Note:** This method supports comparing the same values as `_.isEqual`.": {
+        "prefix": "mtchsprprty",
+        "body": [
+            "_.matchesProperty($1)"
+        ]
+    },
+    "Creates a function that invokes the method at `path` of a given object.\nAny additional arguments are provided to the invoked method.": {
+        "prefix": "mthd",
+        "body": [
+            "_.method($1)"
+        ]
+    },
+    "The opposite of `_.method`; this method creates a function that invokes\nthe method at a given path of `object`. Any additional arguments are\nprovided to the invoked method.": {
+        "prefix": "mthdf",
+        "body": [
+            "_.methodOf($1)"
+        ]
+    },
+    "Creates a function that returns its nth argument.": {
+        "prefix": "nthrg",
+        "body": [
+            "_.nthArg($1)"
+        ]
+    },
+    "Creates a function that invokes `iteratees` with the arguments provided\nto the created function and returns their results.": {
+        "prefix": "ovr",
+        "body": [
+            "_.over($1)"
+        ]
+    },
+    "Creates a function that checks if **all** of the `predicates` return\ntruthy when invoked with the arguments provided to the created function.": {
+        "prefix": "ovrvry",
+        "body": [
+            "_.overEvery($1)"
+        ]
+    },
+    "Creates a function that checks if **any** of the `predicates` return\ntruthy when invoked with the arguments provided to the created function.": {
+        "prefix": "ovrsm",
+        "body": [
+            "_.overSome($1)"
+        ]
+    },
+    "Creates a function that returns the value at `path` of a given object.": {
+        "prefix": "prprty",
+        "body": [
+            "_.property($1)"
+        ]
+    },
+    "The opposite of `_.property`; this method creates a function that returns\nthe value at a given path of `object`.": {
+        "prefix": "prprtyf",
+        "body": [
+            "_.propertyOf($1)"
+        ]
+    },
+    "Creates an array of numbers (positive and/or negative) progressing from\n`start` up to, but not including, `end`. A step of `-1` is used if a negative\n`start` is specified without an `end` or `step`. If `end` is not specified\nit's set to `start` with `start` then set to `0`.\n\n**Note:** JavaScript follows the IEEE-754 standard for resolving\nfloating-point values which can produce unexpected results.": {
+        "prefix": "rng",
+        "body": [
+            "_.range($1)"
+        ]
+    },
+    "This method is like `_.range` except that it populates values in\ndescending order.": {
+        "prefix": "rngrght",
+        "body": [
+            "_.rangeRight($1)"
+        ]
+    },
+    "Invokes the iteratee `n` times, returning an array of the results of\neach invocation. The iteratee is invoked with one argument; (index).": {
+        "prefix": "tms",
+        "body": [
+            "_.times($1)"
+        ]
+    },
+    "Converts `value` to a property path array.": {
+        "prefix": "tpth",
+        "body": [
+            "_.toPath($1)"
+        ]
+    },
+    "This method is like `_.max` except that it accepts `iteratee` which is\ninvoked for each element in `array` to generate the criterion by which\nthe value is ranked. The iteratee is invoked with one argument: (value).": {
+        "prefix": "mxby",
+        "body": [
+            "_.maxBy($1)"
+        ]
+    },
+    "Computes the mean of the values in `array`.": {
+        "prefix": "mn",
+        "body": [
+            "_.mean($1)"
+        ]
+    },
+    "This method is like `_.min` except that it accepts `iteratee` which is\ninvoked for each element in `array` to generate the criterion by which\nthe value is ranked. The iteratee is invoked with one argument: (value).": {
+        "prefix": "mnby",
+        "body": [
+            "_.minBy($1)"
+        ]
+    },
+    "Computes `number` rounded to `precision`.": {
+        "prefix": "rnd",
+        "body": [
+            "_.round($1)"
+        ]
+    },
+    "Subtract two numbers.": {
+        "prefix": "sbtrct",
+        "body": [
+            "_.subtract($1)"
+        ]
+    },
+    "Computes the sum of the values in `array`.": {
+        "prefix": "sm",
+        "body": [
+            "_.sum($1)"
+        ]
+    },
+    "This method is like `_.sum` except that it accepts `iteratee` which is\ninvoked for each element in `array` to generate the value to be summed.\nThe iteratee is invoked with one argument: (value).": {
+        "prefix": "smby",
+        "body": [
+            "_.sumBy($1)"
+        ]
+    },
+    "By default, the template delimiters used by lodash are like those in\nembedded Ruby (ERB). Change the following template settings to use\nalternative delimiters.": {
+        "prefix": "tmpltsttngs",
+        "body": [
+            "_.templateSettings($1)"
+        ]
+    }
 }

@@ -22,7 +22,7 @@
     "lodash",
     "snippets"
   ],
-  "icon": "./lodash-icon.png",
+  "icon": "lodash-icon.png",
   "contributes": {
     "snippets": [
       {
@@ -42,5 +42,13 @@
         "path": "./javascript.json"
       }
     ]
+  },
+  "scripts": {
+    "start": "npm run build-jsdoc && node index.js",
+    "build-jsdoc": "node node_modules/jsdoc/jsdoc node_modules/lodash -X > jsdoc-output.json"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.0",
+    "lodash": "^4.6.1"
   }
 }
