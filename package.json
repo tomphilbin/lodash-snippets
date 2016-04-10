@@ -2,7 +2,7 @@
   "name": "lodash-snippets",
   "displayName": "Lodash Snippets",
   "description": "Snippets for popular lodash functions.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "tomphilbin",
   "license": "MIT",
   "repository": {
@@ -45,10 +45,14 @@
   },
   "scripts": {
     "start": "npm run build-jsdoc && node index.js",
+    "test": "node node_modules/mocha/bin/mocha test/specs --require test/helpers/mocha-chai.helper.js",
+    "tdd": "node node_modules/mocha/bin/mocha test/specs -w --require test/helpers/mocha-chai.helper.js",
     "build-jsdoc": "node node_modules/jsdoc/jsdoc node_modules/lodash -X > jsdoc-output.json"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "jsdoc": "^3.4.0",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "mocha": "^2.4.5"
   }
 }
