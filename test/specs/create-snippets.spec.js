@@ -17,10 +17,10 @@ describe(`create snippets`, () => {
         expect(result[`bacon`]).to.not.be.undefined;
     });
 
-    it(`should set the prefix as the transformed name`, () => {
+    it(`should set the prefix as the name`, () => {
         const result = sut(data);
 
-        expect(result[`bacon`].prefix).to.equal(`ssg`);
+        expect(result[`bacon`].prefix).to.equal(`sausage`);
     });
 
     it(`should set the body and params as the longname`, () => {
