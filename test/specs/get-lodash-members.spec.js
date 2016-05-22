@@ -1,6 +1,6 @@
-const sut = require('../../src/get-all-lodash-functions');
+const sut = require('../../src/get-lodash-members');
 
-describe(`get all lodash functions`, () => {
+describe(`get lodash members`, () => {
 
     const data = [
         { name: `me!`, memberof: `_` },
