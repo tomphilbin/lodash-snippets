@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "jsdoc": "^3.4.0",
+    "jsdoc": "^3.4.1",
     "lodash": "^4.12.0",
     "mocha": "^2.5.3"
   }
