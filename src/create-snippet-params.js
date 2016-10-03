@@ -1,12 +1,8 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-const createParams = (data) => _.map(data, (x) => '${' + x.name + '}');
+const createParams = data => _.map(data, x => `\${${x.name}}`);
+const joinParams = data => _.join(data, ', ');
 
-const joinParams = (data) => _.join(data, ', ');
+const createSnippetParams = _.flow(createParams, joinParams);
 
-const createSnippetParams = _.flow(
-    createParams,
-    joinParams
-);
-
-module.exports = createSnippetParams;
+export default createSnippetParams;

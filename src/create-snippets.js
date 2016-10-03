@@ -1,14 +1,17 @@
-const _ = require('lodash');
-const createSnippetParams = require('./create-snippet-params');
+import _ from 'lodash';
+import createSnippetParams from './create-snippet-params';
 
-const createSnippets = (data) => _.reduce(data, (result, value) => {
-    result[value.description] = {
-        prefix: value.name,
-        body: [
-            `${value.longname}(${createSnippetParams(value.params)});`
-        ]
-    };
-    return result;
+const createSnippets = data => _.reduce(data, (result, value) => {
+  const newResult = result;
+
+  newResult[value.description] = {
+    prefix: value.name,
+    body: [
+      `${value.longname}(${createSnippetParams(value.params)})`,
+    ],
+  };
+
+  return newResult;
 }, {});
 
-module.exports = createSnippets;
+export default createSnippets;
