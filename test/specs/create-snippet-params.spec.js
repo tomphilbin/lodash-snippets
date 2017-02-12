@@ -1,11 +1,10 @@
 import sut from '../../src/create-snippet-params';
 
-describe(`create snippet params`, () => {
-
-  it(`should return the parameters joined with a comma`, () => {
+describe('create snippet params', () => {
+  it('should return the parameters joined with a comma', () => {
     const params = [
       { name: 'firstName' },
-      { name: 'secondName' }
+      { name: 'secondName' },
     ];
 
     const result = sut(params);
@@ -13,13 +12,13 @@ describe(`create snippet params`, () => {
     expect(result).to.equal('${firstName}, ${secondName}');
   });
 
-  it(`should not add a comma if there is only one param`, () => {
+  it('should not add a comma if there is only one param', () => {
     const params = [
-      { name: 'oneParam' }
+      { name: 'oneParam' },
     ];
 
     const result = sut(params);
 
-    expect(result).to.not.contain(`,`);
-  })
+    expect(result).to.not.contain(',');
+  });
 });
