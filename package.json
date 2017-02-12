@@ -2,7 +2,7 @@
   "name": "lodash-snippets",
   "displayName": "Lodash Snippets",
   "description": "Snippets for popular lodash functions.",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "publisher": "tomphilbin",
   "license": "MIT",
   "repository": {
