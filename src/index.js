@@ -12,7 +12,7 @@ const snippetsFlow = _.flow(
   getLodashMembers,
   createSnippets,
   prettyStringify,
-  writeSnippets
+  writeSnippets,
 );
 
 snippetsFlow('./jsdoc-output.json');

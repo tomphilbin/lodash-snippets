@@ -1,12 +1,14 @@
 import sut from '../../src/create-snippets';
 
 describe('create snippets', () => {
-  const data = [{
-    description: 'bacon',
-    name: 'sausage',
-    longname: '_.sausage',
-    params: [{ name: 'param' }],
-  }];
+  const data = [
+    {
+      description: 'bacon',
+      name: 'sausage',
+      longname: '_.sausage',
+      params: [{ name: 'param' }],
+    },
+  ];
 
   it('should set the key as the description', () => {
     const result = sut(data);
