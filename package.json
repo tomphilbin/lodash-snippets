@@ -1,49 +1,45 @@
 {
   "name": "lodash-snippets",
   "displayName": "Lodash Snippets",
-  "description": "Snippets for popular lodash functions.",
-  "version": "0.8.0",
+  "description": "Lodash Snippets for Visual Studio Code.",
+  "version": "1.1.0",
   "publisher": "tomphilbin",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/tomphilbin/lodash-snippets.git"
   },
+  "author": "Tom Philbin",
   "scripts": {
-    "build": "babel src/ -d build/",
-    "create-jsdoc": "jsdoc node_modules/lodash -X > jsdoc-output.json",
-    "lint": "eslint src/",
-    "start": "npm run build && npm run create-jsdoc && node build/index.js",
-    "test": "mocha test/specs --require test/helpers/mocha-chai.helper.js --compilers js:babel-core/register",
-    "tdd": "npm run test -- -w",
-    "vscode:prepublish": "npm start"
+    "fmt": "prettier --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "lint": "eslint src/**/*.js index.js",
+    "start": "node index.js",
+    "test": "jest",
+    "vscode:prepublish": "node index.js"
   },
-  "dependencies": {
-    "jsdoc": "^3.4.3",
-    "lodash": "^4.16.4"
-  },
+  "pre-commit": [
+    "fmt",
+    "lint",
+    "test"
+  ],
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
-    "babel-preset-es2015": "^6.22.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
-    "mocha": "^3.2.0"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "airbnb"
+    "eslint": "3.18.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0",
+    "jest": "19.0.2",
+    "jsdoc": "3.4.3",
+    "lodash": "4.17.4",
+    "lodash.filter": "4.6.0",
+    "lodash.map": "4.6.0",
+    "lodash.reduce": "4.6.0",
+    "pre-commit": "1.2.2",
+    "prettier": "0.22.0",
+    "winston": "2.3.1"
   },
   "engines": {
-    "vscode": "^0.10.10"
+    "vscode": "0.10.10"
   },
   "categories": [
     "Snippets"
@@ -60,19 +56,19 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./javascript.json"
+        "path": "./snippets.json"
       },
       {
         "language": "typescript",
-        "path": "./javascript.json"
+        "path": "./snippets.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./javascript.json"
+        "path": "./snippets.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./javascript.json"
+        "path": "./snippets.json"
       }
     ]
   }

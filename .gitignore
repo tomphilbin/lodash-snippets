@@ -1,9 +1,7 @@
-.DS_Store
-build/
 node_modules/
-
 npm-debug.log*
-javascript.json
-jsdoc-output.json
 
-lodash-snippets-*.vsix
+snippets.json
+lodash-snippets-*.VSIX
+
+.DS_Store

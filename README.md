@@ -1,16 +1,41 @@
-# Lodash Snippets
-Visual Studio Code snippets for lodash functions.
+# Lodash Snippets for Visual Studio Code
 
-## About
-This package runs the jsdoc command line tool against lodash and then transforms the JSON output into snippets.
+## Usage
 
-It also doubles up as a demo for functional programming with lodash using ECMAScript 2015.
+Lodash Snippets can be installed from inside the VS Code Extensions menu. Once installed, snippets will be available IntelliSense.
 
-## Installation 
-This snippet can be installed in VS Code using `ext install lodash-snippets`. You can also view the extension on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tomphilbin.lodash-snippets).
+![Demo](https://media.giphy.com/media/3og0IP4e3q96va5vVu/giphy.gif)
+
+## Running the Source
+
+### Prerequisites
+
+- Node.js >= 7.8.0 – required for async/await.
+- Yarn – optional.
+
+### Instructions
+
+This package builds the snippets from the Lodash JSDoc annotations. To run the source, clone the GitHub repository:
+
+````bash
+git clone https://github.com/tomphilbin/lodash-snippets.git
+````
+
+Then install the dependencies and run:
+
+````bash
+cd lodash-snippets
+yarn # or `npm install`
+yarn start # or `npm start`
+````
+
+The snippets will then be written to the file specified in `src/config.json`.
+
+### Tests
+
+The unit tests can be executed by running `yarn test` or `npm test`.
+
 
 ## Contributing
-[Fork me on GitHub](https://github.com/tomphilbin/lodash-snippets/fork)! 
 
-## Running the generator
-Run `npm start` in the project directory.
+[Fork me on GitHub](https://github.com/tomphilbin/lodash-snippets/fork)!
