@@ -1,5 +1,7 @@
 # Lodash Snippets for Visual Studio Code
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tomphilbin/lodash-snippets.svg)](https://greenkeeper.io/)
+
 ## Usage
 
 Lodash Snippets can be installed from inside the VS Code Extensions menu. Once installed, snippets will be available IntelliSense.
