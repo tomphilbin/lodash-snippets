@@ -1,8 +1,10 @@
 # Lodash Snippets for Visual Studio Code
 
+![Build Status](https://travis-ci.org/tomphilbin/lodash-snippets.svg?branch=master)
+
 ## Usage
 
-Lodash Snippets can be installed from inside the VS Code Extensions menu. Once installed, snippets will be available IntelliSense.
+Lodash Snippets can be installed from inside the VS Code Extensions menu. Once installed, snippets will be available through IntelliSense.
 
 ![Demo](https://media.giphy.com/media/3og0IP4e3q96va5vVu/giphy.gif)
 
